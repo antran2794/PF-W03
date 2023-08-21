@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Giá hoa quả</h2>
+    <input type="text" id="name">
+    <button onclick="m1()">Xem giá</button>
+    <p style="font-size: 20px;" id="result"></p>
+</body>
+<script>
+    function m1() {
+    let name = document.getElementById("name").value.toLowerCase(); // Chuyển đổi tên nhập vào thành chữ thường
+    let price = 0;
+
+    switch(name) {
+        case "ổi":
+            price = 20000;
+            break;
+        case "dưa hấu":
+            price = 20000;
+            break;
+        case "táo":
+            price = 30000;
+            break;
+        case "xoài":
+            price = 30000;
+            break;
+        case "cam":
+            price = 40000;
+            break;
+        case "chôm chôm":
+            price = 40000;
+            break;
+        case "măng cụt":
+            price = 50000;
+            break;
+    }
+    document.getElementById("result").innerHTML = "Giá " + name + " là " + price + " VNĐ/kg";
+}
+</script>
+</html>

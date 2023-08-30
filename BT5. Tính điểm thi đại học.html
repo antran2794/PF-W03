@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm thi Đại Học</title>
+</head>
+<body>
+    <h1>Tính điểm thi Đại Học</h1>
+    <h5>Môn Toán: <input type="number" id="math"</h5>
+    <h5>Môn Văn : <input type="number" id="liter"</h5>
+    <h5>Môn Anh : <input type="number" id="eng"</h5>
+    <h5>Khu vực : 
+        <select id="kv">
+        <option value="0.75">KV1</option>
+        <option value="0.5">KV2-NT</option>
+        <option value="0.25">KV2</option>
+        <option value="0">KV3</option>
+    </select>
+    </h5>
+    <button onclick="m1()">Tính điểm</button>
+    <h4><p id="result" </p></h4>
+</body>
+<script>
+    function m1(){
+        let math = +document.getElementById("math").value
+        let liter = +document.getElementById("liter").value
+        let eng = +document.getElementById("eng").value
+        let kv = +document.getElementById("kv").value
+
+        if ( math<0 || math>10 || liter<0 || liter>10 || eng<0 || eng>10) {
+            alert("Điểm thi nhập không chính xác, vui lòng nhập lại!")
+        } else {
+            let point = math + liter + eng + kv 
+            document.getElementById("result").innerHTML = "Tổng điểm là: " + point
+        }
+    }
+</script>
+</html>
